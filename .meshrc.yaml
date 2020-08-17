@@ -1,0 +1,25 @@
+sources:
+  - name: MyGraphQLApi
+    handler:
+      graphql:
+        endpoint: https://graphql.contentful.com/content/v1/spaces/mivicpf5zews/environments/master
+        schemaHeaders:
+          {
+            authorization: Bearer ffb6d2e75bdeb11580a166b1856d1b183e180c6da95a97998ab50cd12ad9eb85,
+          }
+        operationHeaders:
+          {
+            authorization: Bearer ffb6d2e75bdeb11580a166b1856d1b183e180c6da95a97998ab50cd12ad9eb85,
+          }
+    transforms:
+      - cache:
+          - field: Query.*
+            # cacheKey: test-{args.id}
+            # invalidates:
+            #   effectingOperations:
+            #     - operation: Mutation.updateEntry
+            #       matchKey: test-{args.id}
+additionalTypeDefs: |
+  type Mutation {
+    updateEntry(id: String): Float
+  }

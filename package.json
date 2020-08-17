@@ -1,0 +1,14 @@
+{
+  "name": "contentful-mesh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Konstantin Dichev",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.3.2",
+    "@graphql-mesh/graphql": "^0.3.1",
+    "@graphql-mesh/transform-cache": "^0.3.1",
+    "@graphql-mesh/transform-prefix": "^0.3.1",
+    "graphql": "^15.3.0"
+  }
+}
