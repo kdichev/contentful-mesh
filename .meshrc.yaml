@@ -11,6 +11,7 @@ sources:
           {
             authorization: Bearer ffb6d2e75bdeb11580a166b1856d1b183e180c6da95a97998ab50cd12ad9eb85,
           }
+        # useGETForQueries: true
     transforms:
       - cache:
           - field: Query.*
